@@ -1,4 +1,3 @@
-
 // implement Singly Linked List in C++ using class
 
 #include <iostream> 
@@ -35,22 +34,17 @@ public:
 	// Default constructor 
 	Linkedlist() { head = NULL; } 
 
-	// Function to insert a 
-	// node at the end of the 
-	// linked list. 
+	// Function to insert a node at the end of the linked list. 
 	void insertNode(int); 
 
-	// Function to print the 
-	// linked list. 
+	// Function to print the linked list. 
 	void printList(); 
 
-	// Function to delete the 
-	// node at given position 
+	// Function to delete the node at given position 
 	void deleteNode(int); 
 }; 
 
-// Function to delete the 
-// node at given position 
+// Function to delete the node at given position 
 void Linkedlist::deleteNode(int nodeOffset) 
 { 
 	Node *temp1 = head, *temp2 = NULL; 
@@ -67,9 +61,7 @@ void Linkedlist::deleteNode(int nodeOffset)
 		ListLen++; 
 	} 
 
-	// Check if the position to be 
-	// deleted is greater than the length 
-	// of the linked list. 
+	// Check if the position to be deleted is greater than the length of the linked list. 
 	if (ListLen < nodeOffset) { 
 		cout << "Index out of range"
 			<< endl; 
@@ -88,8 +80,7 @@ void Linkedlist::deleteNode(int nodeOffset)
 		return; 
 	} 
 
-	// Traverse the list to 
-	// find the node to be deleted. 
+	// Traverse the list to find the node to be deleted. 
 	while (nodeOffset-- > 1) { 
 
 		// Update temp2 
@@ -99,8 +90,7 @@ void Linkedlist::deleteNode(int nodeOffset)
 		temp1 = temp1->next; 
 	} 
 
-	// Change the next pointer 
-	// of the previous node. 
+	// Change the next pointer of the previous node. 
 	temp2->next = temp1->next; 
 
 	// Delete the node 
@@ -131,8 +121,7 @@ void Linkedlist::insertNode(int data)
 	temp->next = newNode; 
 } 
 
-// Function to print the 
-// nodes of the linked list. 
+// Function to print the nodes of the linked list. 
 void Linkedlist::printList() 
 { 
 	Node* temp = head; 
