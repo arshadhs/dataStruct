@@ -44,13 +44,13 @@ int main() {
 
     for (auto & testCase :  testCases) {
         cout << endl << "Unsorted: ";
-        for(auto i : testCase)
+        for(const auto & i : testCase)
             cout << " " << i;
 
         selectionSort(testCase);
 
         cout << endl << "Sorted:   ";
-        for(auto i : testCase)
+        for(const auto & i : testCase)
             cout << " " << i;
     }
 
