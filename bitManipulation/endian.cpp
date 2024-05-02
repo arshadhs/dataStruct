@@ -5,11 +5,9 @@ class Solution {
 public:
     // function to show bytes in memory, from location start to start+n 
     void showEndian(char *c, size_t s) {
-
         for (int i = 0; i < s; i++) {
             printf(" %u", &c[i]);
         }
-
 
         for (int i = 0; i < s; i++) {
             printf(" %.2x", c[i]);
