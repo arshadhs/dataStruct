@@ -19,7 +19,7 @@ using namespace std;
 
 void bubbleSort(vector<int> &arr) {
     size_t s = arr.size();
-    if (!s) return;
+    if (!s) return;     // empty vector !
 
     bool swapped = false;
 
