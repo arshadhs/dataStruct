@@ -22,7 +22,7 @@ class BitManipulation {
             cout << x;
         }
 
-        // set pos to 1
+        // set (bit at) pos to 1
         // left-shift the value 1 by pos positions (1<< pos) and perform a bitwise OR operation with num
         static int SetBit(const int num, const int pos) {
             return num | (1 << pos);
@@ -35,7 +35,7 @@ class BitManipulation {
             return (num & (1 << pos) != 0);
         }
 
-        // set bit at pos to 0
+        // set (bit at) pos to 0
         // Left-shift the value 1 by pos positions (1<< pos) 
         // then use bitwise NOT operator ‘~’ to unset this shifted 1 making the bit at position pos to 0 
         // then use Bitwise AND with num that will unset bit at desired positon of num.
