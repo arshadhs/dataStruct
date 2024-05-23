@@ -18,10 +18,13 @@ public:
     // determining endianness of your machine
     void checkIndian() {
         int i = 1;
+
+        printf("\nCheck Indian ( 0x%x ):\n", i);
         showEndian((char *)&i, sizeof(i));
+        
         char *c = (char *)&i;
-        if (*c) cout << "\nLittle endian";
-        else cout << "\nBig endian";
+        if (*c) cout << "Little endian";
+        else cout << "Big endian";
     }
 };
 
