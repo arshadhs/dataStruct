@@ -22,8 +22,6 @@ void insertionSort(vector<T> & arr) {
     if (!n) return;
 
     // begin sorting from the second element of the array (loop variable i = 1)
-
-
     for (int i = 1; i < n; ++i) {
         T key = arr[i];
         int j = i - 1;
