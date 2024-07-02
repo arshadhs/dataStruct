@@ -40,7 +40,7 @@ class BitManipulation {
         // then use bitwise NOT operator ‘~’ to unset this shifted 1 making the bit at position pos to 0 
         // then use Bitwise AND with num that will unset bit at desired positon of num.
         static clearBit(const int num, const int pos) {
-            int mask = ~(1 << num);
+            int mask = ~(1 << pos);
             return (num & mask);
         }
 
@@ -69,13 +69,13 @@ int main() {
     int pos = 5;
     cout << endl << "Decimal: " << num << " Binary: "; BitManipulation::DisplayBitSet(num);
     num = BitManipulation::SetBit(num, pos);
-    cout << endl << "Decimal: " << num << " Binary: "; BitManipulation::DisplayBitSet(num);
-    bool set = BitManipulation::GetBit(num, 5);
-    cout << endl << "Decimal: " << num << " Position: " << pos << " Set: " << set;
-    num = BitManipulation::clearBit(num, 5);
-    cout << endl << "Decimal: " << num << " Binary: "; BitManipulation::DisplayBitSet(num);
+    cout << endl << "Decimal: " << num << " Set Binary: "; BitManipulation::DisplayBitSet(num);
+    bool get = BitManipulation::GetBit(num, 5);
+    cout << endl << "Decimal: " << num << " Position: " << pos << " get: " << get;
+    num = BitManipulation::clearBit(num, 2);
+    cout << endl << "Decimal: " << num << " Clear Binary(2): "; BitManipulation::DisplayBitSet(num);
     num = BitManipulation::toggleBit(num, 0);
-    cout << endl << "Decimal: " << num << " Binary: "; BitManipulation::DisplayBitSet(num);
+    cout << endl << "Decimal: " << num << " Toggle Binary: "; BitManipulation::DisplayBitSet(num);
 
     num = 5;
     bool isPowerOf2 = BitManipulation::isPowerOfTwo(num);
